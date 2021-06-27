@@ -1,6 +1,6 @@
 {
   "name": "@stdlib/math-base-special-sincospi",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Simultaneously compute the sine and cosine of a number times π.",
   "license": "Apache-2.0",
   "author": {
