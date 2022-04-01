@@ -1,0 +1,39 @@
+{
+  "name": "@stdlib/math-base-special-sincospi",
+  "version": "0.0.0",
+  "description": "Simultaneously compute the sine and cosine of a number times π.",
+  "license": "Apache-2.0",
+  "type": "module",
+  "main": "./index.mjs",
+  "homepage": "https://stdlib.io",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/stdlib-js/math-base-special-sincospi.git"
+  },
+  "bugs": {
+    "url": "https://github.com/stdlib-js/stdlib/issues"
+  },
+  "keywords": [
+    "stdlib",
+    "stdmath",
+    "mathematics",
+    "math",
+    "math.sin",
+    "math.cos",
+    "sinpi",
+    "cospi",
+    "sin",
+    "cos",
+    "sincospi",
+    "sine",
+    "cosine",
+    "trig",
+    "trigonometry",
+    "radians",
+    "angle"
+  ],
+  "funding": {
+    "type": "patreon",
+    "url": "https://www.patreon.com/athan"
+  }
+}
