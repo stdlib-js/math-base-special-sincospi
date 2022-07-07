@@ -1,7 +1,7 @@
-/**
+/*
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2019 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,21 +16,37 @@
 * limitations under the License.
 */
 
-'use strict';
+// TypeScript Version: 2.0
 
-// MODULES //
+/// <reference types="https://cdn.jsdelivr.net/gh/stdlib-js/types@esm/index.d.ts"/>
 
-var compute = require( './sincospi.js' );
-
-
-// MAIN //
+import { Collection } from '@stdlib/types/object';
 
 /**
 * Simultaneously computes the sine and cosine of a number times π.
 *
-* @param {(Array|TypedArray|Object)} [out] - destination array
-* @param {number} x - input value
-* @returns {(Array|TypedArray|Object)} two-element array containing sin(πx) and cos(πx)
+* @param out - destination array
+* @param x - input value
+* @returns two-element array containing sin(πx) and cos(πx)
+*
+* @example
+* var Float64Array = require( `@stdlib/array/float64` );
+*
+* var out = new Float64Array( 2 );
+*
+* var v = sincospi( out, 0.0 );
+* // returns <Float64Array>[ 0.0, 1.0 ]
+*
+* var bool = ( v === out );
+* // returns true
+*/
+declare function sincospi( out: Collection, x: number ): Collection;
+
+/**
+* Simultaneously computes the sine and cosine of a number times π.
+*
+* @param x - input value
+* @returns two-element array containing sin(πx) and cos(πx)
 *
 * @example
 * var v = sincospi( 0.0 );
@@ -47,26 +63,10 @@ var compute = require( './sincospi.js' );
 * @example
 * var v = sincospi( NaN );
 * // returns [ NaN, NaN ]
-*
-* @example
-* var Float64Array = require( '@stdlib/array-float64' );
-*
-* var out = new Float64Array( 2 );
-*
-* var v = sincospi( out, 0.0 );
-* // returns <Float64Array>[ 0.0, 1.0 ]
-*
-* var bool = ( v === out );
-* // returns true
 */
-function sincospi( out, x ) {
-	if ( arguments.length === 1 ) {
-		return compute( [ 0.0, 0.0 ], out );
-	}
-	return compute( out, x );
-}
+declare function sincospi( x: number ): Collection;
 
 
 // EXPORTS //
 
-module.exports = sincospi;
+export = sincospi;
