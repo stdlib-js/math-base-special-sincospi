@@ -31,13 +31,13 @@ limitations under the License.
 ## Usage
 
 ```javascript
-import sincospi from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sincospi@deno/mod.js';
+import sincospi from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sincospi@v0.0.7-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sincospi@deno/mod.js';
+import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sincospi@v0.0.7-deno/mod.js';
 ```
 
 #### sincospi( x )
@@ -86,7 +86,7 @@ var bool = ( v === out );
 
 ```javascript
 import linspace from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-linspace@deno/mod.js';
-import sincospi from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sincospi@deno/mod.js';
+import sincospi from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sincospi@v0.0.7-deno/mod.js';
 
 var x = linspace( 0.0, 2.0, 101 );
 
