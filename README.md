@@ -42,13 +42,18 @@ limitations under the License.
 ## Usage
 
 ```javascript
+import sincospi from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sincospi@deno/mod.js';
+```
+The previous example will load the latest bundled code from the deno branch. Alternatively, you may load a specific version by loading the file from one of the [tagged bundles](https://github.com/stdlib-js/math-base-special-sincospi/tags). For example,
+
+```javascript
 import sincospi from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sincospi@v0.1.0-deno/mod.js';
 ```
 
 You can also import the following named exports from the package:
 
 ```javascript
-import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sincospi@v0.1.0-deno/mod.js';
+import { assign } from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sincospi@deno/mod.js';
 ```
 
 #### sincospi( x )
@@ -97,7 +102,7 @@ var bool = ( v === out );
 
 ```javascript
 import linspace from 'https://cdn.jsdelivr.net/gh/stdlib-js/array-base-linspace@deno/mod.js';
-import sincospi from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sincospi@v0.1.0-deno/mod.js';
+import sincospi from 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sincospi@deno/mod.js';
 
 var x = linspace( 0.0, 2.0, 101 );
 
