@@ -1,7 +1,7 @@
 /**
 * @license Apache-2.0
 *
-* Copyright (c) 2018 The Stdlib Authors.
+* Copyright (c) 2024 The Stdlib Authors.
 *
 * Licensed under the Apache License, Version 2.0 (the "License");
 * you may not use this file except in compliance with the License.
@@ -16,6 +16,7 @@
 * limitations under the License.
 */
 
+#include "stdlib/math/base/special/sincospi.h"
 #include <stdlib.h>
 #include <stdio.h>
 #include <math.h>
@@ -70,7 +71,7 @@ static void print_results( double elapsed ) {
 static double tic( void ) {
 	struct timeval now;
 	gettimeofday( &now, NULL );
-	return (double)now.tv_sec + (double)now.tv_usec/1.0e6;
+	return (double)now.tv_sec + (double)now.tv_usec / 1.0e6;
 }
 
 /**
@@ -90,25 +91,24 @@ static double rand_double( void ) {
 */
 static double benchmark( void ) {
 	double elapsed;
+	double cosine;
+	double sine;
 	double x;
-	double y;
-	double z;
 	double t;
 	int i;
 
 	t = tic();
 	for ( i = 0; i < ITERATIONS; i++ ) {
 		x = ( 20.0 * rand_double() ) - 10.0;
-		y = sin( M_PI * x );
-		z = cos( M_PI * x );
-		if ( y != y || z != z ) {
-			printf( "should not return NaN\n" );
+		stdlib_base_sincospi( x, &sine, &cosine );
+		if ( cosine != cosine || sine != sine) {
+			printf( "unexpected results\n" );
 			break;
 		}
 	}
 	elapsed = tic() - t;
-	if ( y != y || z != z ) {
-		printf( "should not return NaN\n" );
+	if ( cosine != cosine || sine != sine) {
+		printf( "unexpected results\n" );
 	}
 	return elapsed;
 }
@@ -125,7 +125,7 @@ int main( void ) {
 
 	print_version();
 	for ( i = 0; i < REPEATS; i++ ) {
-		printf( "# c::%s\n", NAME );
+		printf( "# c::native::%s\n", NAME );
 		elapsed = benchmark();
 		print_results( elapsed );
 		printf( "ok %d benchmark finished\n", i+1 );
