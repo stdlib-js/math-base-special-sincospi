@@ -52,7 +52,7 @@
     "@stdlib/napi-argv-double": "^0.2.1",
     "@stdlib/napi-argv-float64array": "^0.2.2",
     "@stdlib/napi-export": "^0.2.2",
-    "@stdlib/types": "^0.3.2",
+    "@stdlib/types": "^0.4.1",
     "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.2",
     "@stdlib/utils-library-manifest": "^0.2.2"
   },
