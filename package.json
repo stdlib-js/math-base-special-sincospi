@@ -66,7 +66,7 @@
     "@stdlib/math-base-special-cospi": "^0.4.0",
     "@stdlib/math-base-special-pow": "^0.3.0",
     "@stdlib/math-base-special-sinpi": "^0.3.0",
-    "@stdlib/random-base-randu": "^0.2.1",
+    "@stdlib/random-array-uniform": "^0.2.1",
     "@stdlib/utils-try-require": "^0.2.2",
     "tape": "git+https://github.com/kgryte/tape.git#fix/globby",
     "istanbul": "^0.4.1",
