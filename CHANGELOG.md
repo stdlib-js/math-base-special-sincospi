@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2025-04-07)
+## Unreleased (2025-04-09)
 
 <section class="reverts">
 
@@ -22,6 +22,7 @@
 
 <details>
 
+-   [`2f78853`](https://github.com/stdlib-js/stdlib/commit/2f788539be521ba8e7e1c76a37e9fddc57530596) - **docs:** update related packages sections [(#6617)](https://github.com/stdlib-js/stdlib/pull/6617) _(by stdlib-bot)_
 -   [`630ddb7`](https://github.com/stdlib-js/stdlib/commit/630ddb777824b5f6e501fda6dadf4ce41dccb964) - **test:** replace equal with strictEqual _(by Karan Anand)_
 -   [`e196811`](https://github.com/stdlib-js/stdlib/commit/e196811330529364e4bf889dc9df2f74f3bf5cb9) - **bench:** update random value generation [(#5987)](https://github.com/stdlib-js/stdlib/pull/5987) _(by Karan Anand)_
 -   [`fccc0b2`](https://github.com/stdlib-js/stdlib/commit/fccc0b294aa5be12f8e08aa2b7085c2a978de30c) - **chore:** update `runner.jl` to follow current project conventions [(#5988)](https://github.com/stdlib-js/stdlib/pull/5988) _(by Karan Anand)_
