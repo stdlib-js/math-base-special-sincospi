@@ -51,10 +51,10 @@
     "@stdlib/napi-argv": "^0.2.2",
     "@stdlib/napi-argv-double": "^0.2.1",
     "@stdlib/napi-argv-float64array": "^0.2.2",
-    "@stdlib/napi-export": "^0.2.2",
+    "@stdlib/napi-export": "^0.3.0",
     "@stdlib/types": "^0.4.3",
     "@stdlib/utils-define-nonenumerable-read-only-property": "^0.2.2",
-    "@stdlib/utils-library-manifest": "^0.2.2"
+    "@stdlib/utils-library-manifest": "^0.2.3"
   },
   "devDependencies": {
     "@stdlib/array-base-linspace": "^0.2.2",
