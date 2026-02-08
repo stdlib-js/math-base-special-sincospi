@@ -35,38 +35,32 @@ limitations under the License.
 
 > Simultaneously compute the [sine][@stdlib/math/base/special/sin] and [cosine][@stdlib/math/base/special/cos] of a number times [π][@stdlib/constants/float64/pi].
 
+<section class="installation">
 
+## Installation
+
+```bash
+npm install @stdlib/math-base-special-sincospi
+```
+
+Alternatively,
+
+-   To load the package in a website via a `script` tag without installation and bundlers, use the [ES Module][es-module] available on the [`esm`][esm-url] branch (see [README][esm-readme]).
+-   If you are using Deno, visit the [`deno`][deno-url] branch (see [README][deno-readme] for usage intructions).
+-   For use in Observable, or in browser/node environments, use the [Universal Module Definition (UMD)][umd] build available on the [`umd`][umd-url] branch (see [README][umd-readme]).
+
+The [branches.md][branches-url] file summarizes the available branches and displays a diagram illustrating their relationships.
+
+To view installation and usage instructions specific to each branch build, be sure to explicitly navigate to the respective README files on each branch, as linked to above.
+
+</section>
 
 <section class="usage">
 
 ## Usage
 
-To use in Observable,
-
 ```javascript
-sincospi = require( 'https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sincospi@umd/browser.js' )
-```
-
-To vendor stdlib functionality and avoid installing dependency trees for Node.js, you can use the UMD server build:
-
-```javascript
-var sincospi = require( 'path/to/vendor/umd/math-base-special-sincospi/index.js' )
-```
-
-To include the bundle in a webpage,
-
-```html
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sincospi@umd/browser.js"></script>
-```
-
-If no recognized module system is present, access bundle contents via the global scope:
-
-```html
-<script type="text/javascript">
-(function () {
-    window.sincospi;
-})();
-</script>
+var sincospi = require( '@stdlib/math-base-special-sincospi' );
 ```
 
 #### sincospi( x )
@@ -113,14 +107,9 @@ var bool = ( v === out );
 
 <!-- eslint no-undef: "error" -->
 
-```html
-<!DOCTYPE html>
-<html lang="en">
-<body>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/array-base-linspace@umd/browser.js"></script>
-<script type="text/javascript" src="https://cdn.jsdelivr.net/gh/stdlib-js/math-base-special-sincospi@umd/browser.js"></script>
-<script type="text/javascript">
-(function () {
+```javascript
+var linspace = require( '@stdlib/array-base-linspace' );
+var sincospi = require( '@stdlib/math-base-special-sincospi' );
 
 var x = linspace( 0.0, 2.0, 101 );
 
@@ -128,11 +117,6 @@ var i;
 for ( i = 0; i < x.length; i++ ) {
     console.log( sincospi( x[ i ] ) );
 }
-
-})();
-</script>
-</body>
-</html>
 ```
 
 </section>
@@ -141,7 +125,93 @@ for ( i = 0; i < x.length; i++ ) {
 
 <!-- C interface documentation. -->
 
+* * *
 
+<section class="c">
+
+## C APIs
+
+<!-- Section to include introductory text. Make sure to keep an empty line after the intro `section` element and another before the `/section` close. -->
+
+<section class="intro">
+
+</section>
+
+<!-- /.intro -->
+
+<!-- C usage documentation. -->
+
+<section class="usage">
+
+### Usage
+
+```c
+#include "stdlib/math/base/special/sincospi.h"
+```
+
+#### stdlib_base_sincospi( x, &sine, &cosine )
+
+Simultaneously computes the [sine][@stdlib/math/base/special/sin] and [cosine][@stdlib/math/base/special/cos] of a `number` times [π][@stdlib/constants/float64/pi] more accurately than `sincos(pi*x)`, especially for large `x`.
+
+```c
+double cosine;
+double sine;
+
+stdlib_base_sincospi( 4.0, &sine, &cosine );
+```
+
+The function accepts the following arguments:
+
+-   **x**:      `[in] double` input value.
+-   **sine**:   `[out] double*` destination for the sine.
+-   **cosine**: `[out] double*` destination for the cosine.
+
+```c
+void stdlib_base_sincospi( const double x, double *sine, double *cosine );
+```
+
+</section>
+
+<!-- /.usage -->
+
+<!-- C API usage notes. Make sure to keep an empty line after the `section` element and another before the `/section` close. -->
+
+<section class="notes">
+
+</section>
+
+<!-- /.notes -->
+
+<!-- C API usage examples. -->
+
+<section class="examples">
+
+### Examples
+
+```c
+#include "stdlib/math/base/special/sincospi.h"
+#include <stdio.h>
+
+int main( void ) {
+    const double x[] = { 0.0, 1.57, 3.14, 6.28 };
+
+    double cosine;
+    double sine;
+    int i;
+    for ( i = 0; i < 4; i++ ) {
+        stdlib_base_sincospi( x[ i ], &sine, &cosine );
+        printf( "x: %lf => sine: %lf, cosine: %lf\n", x[ i ], sine, cosine );
+    }
+}
+```
+
+</section>
+
+<!-- /.examples -->
+
+</section>
+
+<!-- /.c -->
 
 <!-- Section for related `stdlib` packages. Do not manually edit this section, as it is automatically populated. -->
 
@@ -198,8 +268,8 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [npm-image]: http://img.shields.io/npm/v/@stdlib/math-base-special-sincospi.svg
 [npm-url]: https://npmjs.org/package/@stdlib/math-base-special-sincospi
 
-[test-image]: https://github.com/stdlib-js/math-base-special-sincospi/actions/workflows/test.yml/badge.svg?branch=main
-[test-url]: https://github.com/stdlib-js/math-base-special-sincospi/actions/workflows/test.yml?query=branch:main
+[test-image]: https://github.com/stdlib-js/math-base-special-sincospi/actions/workflows/test.yml/badge.svg?branch=v0.3.1
+[test-url]: https://github.com/stdlib-js/math-base-special-sincospi/actions/workflows/test.yml?query=branch:v0.3.1
 
 [coverage-image]: https://img.shields.io/codecov/c/github/stdlib-js/math-base-special-sincospi/main.svg
 [coverage-url]: https://codecov.io/github/stdlib-js/math-base-special-sincospi?branch=main
@@ -231,19 +301,19 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/math-base-special-sincospi/main/LICENSE
 
-[@stdlib/math/base/special/sin]: https://github.com/stdlib-js/math-base-special-sin/tree/umd
+[@stdlib/math/base/special/sin]: https://github.com/stdlib-js/math-base-special-sin
 
-[@stdlib/math/base/special/cos]: https://github.com/stdlib-js/math-base-special-cos/tree/umd
+[@stdlib/math/base/special/cos]: https://github.com/stdlib-js/math-base-special-cos
 
-[@stdlib/constants/float64/pi]: https://github.com/stdlib-js/constants-float64-pi/tree/umd
+[@stdlib/constants/float64/pi]: https://github.com/stdlib-js/constants-float64-pi
 
 <!-- <related-links> -->
 
-[@stdlib/math/base/special/cospi]: https://github.com/stdlib-js/math-base-special-cospi/tree/umd
+[@stdlib/math/base/special/cospi]: https://github.com/stdlib-js/math-base-special-cospi
 
-[@stdlib/math/base/special/sincos]: https://github.com/stdlib-js/math-base-special-sincos/tree/umd
+[@stdlib/math/base/special/sincos]: https://github.com/stdlib-js/math-base-special-sincos
 
-[@stdlib/math/base/special/sinpi]: https://github.com/stdlib-js/math-base-special-sinpi/tree/umd
+[@stdlib/math/base/special/sinpi]: https://github.com/stdlib-js/math-base-special-sinpi
 
 <!-- </related-links> -->
 
