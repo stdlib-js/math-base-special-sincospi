@@ -35,6 +35,22 @@ limitations under the License.
 
 > Simultaneously compute the [sine][@stdlib/math/base/special/sin] and [cosine][@stdlib/math/base/special/cos] of a number times [π][@stdlib/constants/float64/pi].
 
+<section class="intro">
+
+The function simultaneously computes the [sine][sine] and [cosine][cosine] of a number scaled by `π`
+
+<!-- <equation class="equation" label="eq:sincospi_function" align="center" raw="(y_s, y_c) = (\sin(\pi x),\; \cos(\pi x))" alt="Sine and cosine of pi times x"> -->
+
+```math
+(y_s, y_c) = (\sin(\pi x),\; \cos(\pi x))
+```
+
+<!-- </equation> -->
+
+</section>
+
+<!-- /.intro -->
+
 <section class="installation">
 
 ## Installation
@@ -300,6 +316,10 @@ Copyright &copy; 2016-2026. The Stdlib [Authors][stdlib-authors].
 [branches-url]: https://github.com/stdlib-js/math-base-special-sincospi/blob/main/branches.md
 
 [stdlib-license]: https://raw.githubusercontent.com/stdlib-js/math-base-special-sincospi/main/LICENSE
+
+[cosine]: https://en.wikipedia.org/wiki/Cosine
+
+[sine]: https://en.wikipedia.org/wiki/Sine
 
 [@stdlib/math/base/special/sin]: https://github.com/stdlib-js/math-base-special-sin
 
