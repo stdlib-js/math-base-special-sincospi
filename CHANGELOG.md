@@ -4,7 +4,7 @@
 
 <section class="release" id="unreleased">
 
-## Unreleased (2026-09-20)
+## Unreleased (2026-11-05)
 
 <section class="commits">
 
@@ -12,6 +12,8 @@
 
 <details>
 
+-   [`7349dff`](https://github.com/stdlib-js/stdlib/commit/7349dffeddd90289879f06e70acc1be8544af75b) - **style:** add missing whitespace [(#16507)](https://github.com/stdlib-js/stdlib/pull/16507) _(by Philipp Burckhardt)_
+-   [`78ad2fa`](https://github.com/stdlib-js/stdlib/commit/78ad2fa5dbb12ce808dec93197d5343745ff91b8) - **docs:** normalize trailing newlines in REPL help texts [(#16420)](https://github.com/stdlib-js/stdlib/pull/16420) _(by Philipp Burckhardt)_
 -   [`2d9f528`](https://github.com/stdlib-js/stdlib/commit/2d9f52814b7ed08bda0cbb89cb485e6ed2d78865) - **docs:** add equations [(#14687)](https://github.com/stdlib-js/stdlib/pull/14687) _(by Karan Anand)_
 -   [`4359924`](https://github.com/stdlib-js/stdlib/commit/43599246a31b178c42f23d7f9a9f9caa4931efb9) - **test:** migrate `math/base/special/sincospi` to ULP-based assertions [(#14782)](https://github.com/stdlib-js/stdlib/pull/14782) _(by Athan Reines)_
 -   [`b953edd`](https://github.com/stdlib-js/stdlib/commit/b953edd95d0ca1b521d0abbd2c2719d099ff7807) - **refactor:** use `constants/float64/nan` and clean-up [(#13585)](https://github.com/stdlib-js/stdlib/pull/13585) _(by Philipp Burckhardt)_
